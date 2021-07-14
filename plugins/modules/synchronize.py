@@ -137,7 +137,9 @@ options:
     default: yes
   use_ssh_args:
     description:
-      - Use the ssh_args specified in ansible.cfg. Setting this to `yes` will also make `synchronize` use `ansible_ssh_common_args`.
+      - In Ansible 2.10 and lower, it uses the ssh_args specified in C(ansible.cfg).
+      - In Ansible 2.11 and onwards, it uses SSH connection configurations.
+      - Setting this to C(yes) will also make M(ansible.posix.synchronize) use C(ansible_ssh_common_args).
     type: bool
     default: no
   ssh_connection_multiplexing:
